@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>纯静态 Markdown 编辑器</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/marked@12.0.2/lib/marked.umd.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>简易 Markdown 编辑器</h1>
+        
+        <div class="editor-container">
+            <div class="pane">
+                <h2>输入 (Markdown)</h2>
+                <textarea id="markdown-input" placeholder="在这里输入 Markdown 文本..."></textarea>
+            </div>
+            
+            <div class="pane">
+                <h2>预览 (HTML)</h2>
+                <div id="preview-output" class="markdown-body">
+                    <p>您的 Markdown 实时预览将出现在这里。</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    
+    <footer class="license-footer">
+        <a href="https://github.com/markedjs/marked/blob/master/LICENSE.md" target="_blank">Marked.js MIT License</a>
+    </footer>
+</body>
+</html>

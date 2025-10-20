@@ -1,0 +1,115 @@
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    background-color: #f6f8fa;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container {
+    background: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    width: 95%;
+    max-width: 1400px;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 25px;
+}
+
+h2 {
+    color: #4a4a4a;
+    font-size: 1.2em;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 5px;
+    margin-top: 0;
+}
+
+.editor-container {
+    display: flex;
+    gap: 20px;
+}
+
+.pane {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+}
+
+#markdown-input {
+    flex-grow: 1;
+    min-height: 600px;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-family: 'Consolas', 'Courier New', monospace;
+    font-size: 14px;
+    resize: none;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+#markdown-input:focus {
+    border-color: #0366d6;
+    box-shadow: 0 0 0 3px rgba(3, 102, 214, 0.2);
+}
+
+#preview-output {
+    flex-grow: 1;
+    min-height: 600px;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
+    overflow-y: auto;
+}
+
+.markdown-body h1, .markdown-body h2, .markdown-body h3, .markdown-body h4 {
+    border-bottom: none;
+}
+
+.markdown-body pre {
+    background-color: #f6f8fa;
+    padding: 10px;
+    border-radius: 3px;
+    overflow-x: auto;
+}
+
+.markdown-body code {
+    background-color: rgba(27, 31, 35, 0.05);
+    padding: 2px 4px;
+    border-radius: 3px;
+}
+
+.license-footer {
+    margin-top: 30px;
+    font-size: 12px;
+    color: #6a737d;
+}
+
+.license-footer a {
+    color: #0366d6;
+    text-decoration: none;
+}
+
+@media (max-width: 900px) {
+    .editor-container {
+        flex-direction: column;
+    }
+    
+    .pane {
+        width: 100%;
+    }
+
+    #markdown-input, #preview-output {
+        min-height: 400px;
+    }
+}
